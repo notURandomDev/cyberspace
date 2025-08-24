@@ -8,12 +8,8 @@ import { SkillIconsSwift } from "@/components/SvgIcons/SkillIconsSwift";
 import { SkillIconsVuejsDark } from "@/components/SvgIcons/SkillIconsVuejsDark";
 import { SkillIconsVuejsLight } from "@/components/SvgIcons/SkillIconsVuejsLight";
 import { SkillIconsExpressjsLight } from "@/components/SvgIcons/SkillsIconsExpressJsLight";
-import {
-  GithubInfo,
-  ProjectScale,
-  ProjectType,
-  ProjectWebsiteInfo,
-} from "@/types/project";
+import { ProjectScale, ProjectType, ProjectWebsiteInfo } from "@/types/project";
+import { WebsiteInfo } from "@/types/util";
 
 interface Project {
   name: string;
@@ -25,7 +21,7 @@ interface Project {
   type: ProjectType[];
   status: "done" | "wip";
   notionUrl?: string;
-  githubInfo?: GithubInfo;
+  githubInfo?: WebsiteInfo;
   projectWebsiteInfo?: ProjectWebsiteInfo;
   imgSrc?: string;
   icon: any;
@@ -49,13 +45,17 @@ export const PROJECTS: Project[] = [
     icon: SkillIconsReactDark,
     devSpan: "2025-07 - Now",
     scale: "solo",
+    githubInfo: {
+      name: "cyberspace",
+      url: "https://github.com/notURandomDev/cyberspace",
+    },
   },
   {
     title: "Bits CI SuperCharged",
     name: "bits-ci-supercharged",
     techStack: "React.js + HeroUI",
     description: "CI测试提效工具",
-    description2: "飞书实习期间做的工作提效工具",
+    description2: "基于批量发送请求的能力",
     device: "pc",
     status: "wip",
     type: ["web-frontend"],
@@ -85,7 +85,8 @@ export const PROJECTS: Project[] = [
     name: "netease-music-clone",
     techStack: "Taro + Taroify",
     description: "小程序版的网易云音乐",
-    description2: "「软件开发实践3」课程设计项目",
+    // description2: "「软件开发实践3」课程设计项目",
+    description2: "滚动歌词组件、全局状态管理",
     device: "mobile",
     status: "done",
     type: ["miniprogram"],
@@ -104,7 +105,8 @@ export const PROJECTS: Project[] = [
     name: "lark-clone",
     techStack: "Swift + UIKit",
     description: "仿飞书 APP 开发",
-    description2: "字节跳动-飞书技术训练营项目",
+    // description2: "字节跳动-飞书技术训练营项目",
+    description2: "多技术栈、混合构建系统",
     device: "mobile",
     status: "done",
     type: ["client"],
@@ -123,7 +125,8 @@ export const PROJECTS: Project[] = [
     name: "a18",
     techStack: "RN + Nativewind",
     description: "智能AI会议助手",
-    description2: "服务外包比赛｜出题方：安恒信息",
+    description2: "AI聊天流式输出渲染、会议实时总结",
+    // description2: "服务外包比赛｜出题方：安恒信息",
     device: "mobile",
     status: "done",
     type: ["client"],
@@ -142,7 +145,8 @@ export const PROJECTS: Project[] = [
     name: "w2g",
     techStack: "Java + Appwrite",
     description: "推荐附近有趣的场所",
-    description2: "「移动应用开发」课程设计项目",
+    description2: "BaaS简化全栈项目的后端开发",
+    // description2: "「移动应用开发」课程设计项目",
     device: "mobile",
     status: "done",
     type: ["full-stack", "client"],
@@ -158,7 +162,8 @@ export const PROJECTS: Project[] = [
     name: "groove-shooter",
     techStack: "RN + Appwrite",
     description: "提升鼓手律动的小游戏",
-    description2: "「创新实践3」课程设计项目",
+    // description2: "「创新实践3」课程设计项目",
+    description2: "深入鼓手垂域，探索创新性功能",
     device: "mobile",
     status: "done",
 
@@ -202,7 +207,6 @@ export const PROJECTS: Project[] = [
       "https://noturandomdev.notion.site/Vocablist-2572ad4d787280869880e569100c9b7f",
     githubInfo: {
       name: "vocablist",
-
       url: "https://github.com/notURandomDev/vocablist",
     },
     icon: SkillIconsVuejsLight,
@@ -210,13 +214,13 @@ export const PROJECTS: Project[] = [
     devSpan: "2024-08",
     scale: "solo",
   },
-
   {
     title: "毕业设计管理系统",
     name: "gpms",
     techStack: "Express.js",
     description: "Graduation Project Management System",
-    description2: "[软件工程] 课程设计项目",
+    // description2: "[软件工程] 课程设计项目",
+    description2: "后端开发的一次探索性尝试",
     device: "pc",
     status: "done",
     type: ["backend"],
@@ -234,7 +238,8 @@ export const PROJECTS: Project[] = [
     name: "a11",
     techStack: "React.js + CSS",
     description: "智能问答系统",
-    description2: "服务外包比赛｜出题方：超星集团",
+    // description2: "服务外包比赛｜出题方：超星集团",
+    description2: "第一个大型项目，具有启蒙意义",
     device: "pc",
     status: "done",
     type: ["web-frontend"],
@@ -242,7 +247,6 @@ export const PROJECTS: Project[] = [
       "https://noturandomdev.notion.site/1b62ad4d787281c1a343e4b261056b4e",
     githubInfo: {
       name: "a11",
-
       url: "https://github.com/notURandomDev/a11",
     },
     icon: SkillIconsReactDark,
@@ -256,7 +260,8 @@ export const PROJECTS: Project[] = [
     name: "essence-extract",
     techStack: "HTML + CSS + JS",
     description: "书籍浓缩提取",
-    description2: "「Web前端开发技术」课程设计项目",
+    description2: "踏入前端领域的首次尝试",
+    // description2: "「Web前端开发技术」课程设计项目",
     device: "pc",
     status: "done",
     type: ["web-frontend"],
