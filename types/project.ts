@@ -1,8 +1,3 @@
-export type GithubInfo = {
-  name: string;
-  url: string;
-};
-
 export interface ProjectWebsiteInfo {
   name: string;
   url: string;

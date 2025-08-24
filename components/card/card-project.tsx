@@ -6,8 +6,9 @@ import { useState } from "react";
 import { SkillIconsGithubDark } from "../SvgIcons/SkillIconsGithubDark";
 import { SkillIconsNotionDark } from "../SvgIcons/SkillIconsNotionDark";
 import { SquareArrowOutUpRight } from "lucide-react";
-import { GithubInfo, ProjectScale, ProjectWebsiteInfo } from "@/types/project";
+import { ProjectScale, ProjectWebsiteInfo } from "@/types/project";
 import { Chip } from "@heroui/chip";
+import { WebsiteInfo } from "@/types/util";
 
 interface ProjectCardProps {
   name?: string;
@@ -19,7 +20,7 @@ interface ProjectCardProps {
   isDisabled?: boolean;
   icon?: any;
   notionUrl?: string;
-  githubInfo?: GithubInfo;
+  githubInfo?: WebsiteInfo;
   projectWebsiteInfo?: ProjectWebsiteInfo;
   projectUrl?: string;
   devSpan: string;
