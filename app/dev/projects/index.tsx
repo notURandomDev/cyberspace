@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { useIsSmallScreen } from "@/hooks/use-window-size";
 import { Card, CardBody } from "@heroui/card";
@@ -51,14 +53,19 @@ const ProjectTypeNameMap: Record<ProjectType, string> = {
 
 const ProjectsSection = () => {
   const { theme } = useTheme();
-  const isSmallScreen = useIsSmallScreen();
+  const isSmallScreen = useIsSmallScreen(768);
 
   // 根据屏幕尺寸计算是否使用垂直布局
   const isVertical = !isSmallScreen;
   const fullWidth = isSmallScreen;
 
   return (
-    <Tabs isVertical={isVertical} fullWidth={fullWidth} variant="light">
+    <Tabs
+      isVertical={isVertical}
+      fullWidth={fullWidth}
+      variant="light"
+      hidden={isSmallScreen}
+    >
       {PROJECT_TABS.map((projectTab) => {
         const displayAll = projectTab.type === "all";
         return (
