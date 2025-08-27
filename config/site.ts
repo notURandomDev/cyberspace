@@ -12,6 +12,10 @@ export const siteConfig = {
       label: "音乐",
       href: "/music",
     },
+    {
+      label: "简历",
+      href: "/resume",
+    },
   ],
   navMenuItems: [
     {

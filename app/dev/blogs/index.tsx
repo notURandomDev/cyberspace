@@ -5,7 +5,6 @@ import { Tabs, Tab } from "@heroui/tabs";
 import React from "react";
 import { BLOGS } from "./data";
 import { Link } from "@heroui/link";
-import { Chip } from "@heroui/chip";
 import Image from "next/image";
 
 const BLOG_TABS = [
