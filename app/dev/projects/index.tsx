@@ -1,4 +1,5 @@
 import React from "react";
+import { useIsSmallScreen } from "@/hooks/use-window-size";
 import { Card, CardBody } from "@heroui/card";
 import { Tabs, Tab } from "@heroui/tabs";
 import { PROJECTS } from "./data";
@@ -50,8 +51,14 @@ const ProjectTypeNameMap: Record<ProjectType, string> = {
 
 const ProjectsSection = () => {
   const { theme } = useTheme();
+  const isSmallScreen = useIsSmallScreen();
+
+  // 根据屏幕尺寸计算是否使用垂直布局
+  const isVertical = !isSmallScreen;
+  const fullWidth = isSmallScreen;
+
   return (
-    <Tabs isVertical>
+    <Tabs isVertical={isVertical} fullWidth={fullWidth} variant="light">
       {PROJECT_TABS.map((projectTab) => {
         const displayAll = projectTab.type === "all";
         return (
@@ -59,7 +66,7 @@ const ProjectsSection = () => {
             <Card>
               <CardBody>{projectTab.desc}</CardBody>
             </Card>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {PROJECTS.filter((project) =>
                 displayAll
                   ? true

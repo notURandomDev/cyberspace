@@ -53,7 +53,7 @@ export default function ProjectCard({
         </div>
         {icon}
       </CardHeader>
-      <CardBody className="overflow-visible py-0 justify-center">
+      <CardBody className="overflow-visible py-0 justify-center items-center">
         <Image
           alt="Card background"
           className="object-cover rounded-xl"
