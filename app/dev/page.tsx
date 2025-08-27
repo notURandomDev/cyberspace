@@ -24,7 +24,7 @@ export default function DevPage() {
         >
           <ProjectsSection />
         </Tab>
-        <Tab
+        {/* <Tab
           className="flex w-full md:justify-start justify-center"
           key="techStacks"
           title="技术栈"
@@ -44,7 +44,7 @@ export default function DevPage() {
           title="话题"
         >
           <HacksSection />
-        </Tab>
+        </Tab> */}
       </Tabs>
     </div>
   );
